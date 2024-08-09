@@ -35,7 +35,7 @@ module Pexcel
 		end
 
 
-      def self.generate_pdf_for_reddoorz
+      def self.generate_pdf_for_abc
       	dirname = Rails.root.join('app', 'assets', 'images')
         Prawn::Font::AFM.hide_m17n_warning = true
         pdf = Prawn::Document.new(page_size: 'A4', page_layout: :landscape)
@@ -48,7 +48,7 @@ module Pexcel
         pdf.font "Arial"
         payment_date = Date.today.to_date
   
-        two_dimensional_array = pdf.make_table([['COMMEASURE SOLUTIONS PHILIPPINES INC', size: 15], ["LG1 Cityland III 105 VA Rufino St. Legaspi Village, San Lorenzo, Makati City, NCR 1223", align: :center], ["accounts-philippines@reddoorz.com"], ["VAT REG. TIN: 009-654-476-000", size: 15]], :cell_style => {:borders => [], :padding => [2, 2, 2, 2], :align => :center, :text_color => "0070c0", :font_style => :bold})
+        two_dimensional_array = pdf.make_table([['COMMEASURE SOLUTIONS PHILIPPINES INC', size: 15], ["LG1 Cityland III 105 VA Rufino St. Legaspi Village, San Lorenzo, Makati City, NCR 1223", align: :center], [""], ["VAT REG. TIN: 009-654-476-000", size: 15]], :cell_style => {:borders => [], :padding => [2, 2, 2, 2], :align => :center, :text_color => "0070c0", :font_style => :bold})
         ak_r = pdf.make_table([["OFFICIAL RECEIPT"], ["(Other Information Technology and Computer Service Activities)"]], :cell_style => {:borders => [], :padding => [0, 0, 0, 0], :align => :left, :font_style => :bold})
         booking_data = [["Booking ID", "Guest Name", "Booking Source"]]
         

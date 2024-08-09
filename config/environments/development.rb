@@ -61,15 +61,6 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
-  config.action_mailer.smtp_settings = { 
-    :address => 'smtp.sendgrid.net',
-    :port => '2525',
-    :domain => 'reddoorz.com',
-    :authentication => :plain,
-    :user_name => 'apikey',
-    :password => ''
-}
-
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
 
